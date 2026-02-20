@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>دعوت به مراسم عقد | آذین و محسن</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Vazirmatn:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--bg:#fbfbfb;
+--ink:#222;
+--gold:#c7a356;
+--shadow:0 18px 45px rgba(0,0,0,.08);
+--border:1px solid rgba(0,0,0,.06);
+--max:1020px
+}
+*{box-sizing:border-box}
+body{
+margin:0;
+background:radial-gradient(1200px 700px at 15% -10%, rgba(199,163,86,.12), transparent 55%),radial-gradient(900px 500px at 85% 0%, rgba(34,139,34,.08), transparent 50%),var(--bg);
+font-family:Vazirmatn,system-ui;
+color:var(--ink)
+}
+.wrap{max-width:var(--max);margin:auto;padding:24px 18px 80px}
+.hero{background:#fff;border-radius:24px;box-shadow:var(--shadow);padding:40px 20px}
+.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr}}
+
+.names{text-align:center}
+.script{font-family:"Great Vibes";font-size:64px}
+.invite{text-align:center;margin-top:10px}
+
+.photo{width:100%;border-radius:22px;object-fit:cover;
+filter:saturate(.9) brightness(.95) sepia(.08)}
+
+.meta{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
+@media(max-width:560px){.meta{grid-template-columns:1fr}}
+
+.pill{background:#fff;border-radius:16px;padding:12px;box-shadow:0 10px 25px rgba(0,0,0,.06)}
+
+.countdown{text-align:center;margin-top:20px}
+.timegrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.tbox{background:#fff;border-radius:12px;padding:10px}
+.num{font-size:26px;font-weight:700}
+
+.section{margin-top:30px;background:#fff;border-radius:24px;box-shadow:var(--shadow);padding:20px}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:700px){.gallery{grid-template-columns:1fr}}
+
+.map iframe{width:100%;height:360px;border:0;border-radius:18px}
+footer{text-align:center;margin-top:30px;color:#777}
+</style>
+</head>
+
+<body>
+
+<div class="wrap">
+
+<section class="hero">
+<div class="hero-inner">
+
+<div>
+<div class="names">
+<div class="script">Azin & Mohsen</div>
+<div>آذین و محسن</div>
+</div>
+
+<div class="invite">
+با افتخار از شما دعوت می‌کنیم در مراسم عقد ما حضور داشته باشید و این روز زیبا را در کنار ما جشن بگیرید.
+</div>
+
+<div class="meta">
+<div class="pill">
+۹ اسفند ۱۴۰۴<br>
+۱۸:۳۰ تا ۲۱:۳۰
+</div>
+<div class="pill">
+عقد به صرف میوه، شیرینی و شام
+</div>
+</div>
+
+<div class="countdown">
+<div class="timegrid">
+<div class="tbox"><div class="num" id="d"></div>روز</div>
+<div class="tbox"><div class="num" id="h"></div>ساعت</div>
+<div class="tbox"><div class="num" id="m"></div>دقیقه</div>
+<div class="tbox"><div class="num" id="s"></div>ثانیه</div>
+</div>
+</div>
+</div>
+
+<div>
+<img class="photo" src="images/IMG_9537.jpg">
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<h3>آدرس و نقشه</h3>
+<p>تهران، شهرک غرب، خیابان هرمزان، کوچه یازدهم، پلاک ۳</p>
+
+<div class="map">
+<iframe src="https://www.google.com/maps?q=تهران شهرک غرب خیابان هرمزان کوچه یازدهم پلاک 3&output=embed"></iframe>
+</div>
+</section>
+
+<section class="section">
+<h3>گالری</h3>
+<div class="gallery">
+<img class="photo" src="images/IMG_9537.jpg">
+<img class="photo" src="images/IMG_0243.jpg">
+</div>
+</section>
+
+<footer>
+با عشق برای آذین و محسن
+</footer>
+
+</div>
+
+<script>
+const target=new Date("2026-02-28T18:30:00+03:30")
+setInterval(()=>{
+const now=new Date()
+let diff=target-now
+if(diff<0)diff=0
+const d=Math.floor(diff/86400000)
+const h=Math.floor(diff/3600000)%24
+const m=Math.floor(diff/60000)%60
+const s=Math.floor(diff/1000)%60
+document.getElementById("d").innerText=d
+document.getElementById("h").innerText=h
+document.getElementById("m").innerText=m
+document.getElementById("s").innerText=s
+},1000)
+</script>
+
+</body>
+</html>
